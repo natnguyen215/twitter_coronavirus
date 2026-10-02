@@ -54,7 +54,7 @@ plt.bar(range(len(labels)), values)
 plt.xticks(range(len(labels)), labels, rotation=45, ha='right')
 plt.xlabel(x_label)
 plt.ylabel('count')
-plt.title(f'{args.key} by {x_label}')
+plt.title(f'{args.key if args.key.isascii() else "#coronavirus (Korean)"} by {x_label}')
 
 # save the plot as png
 # derive filename from input path and key
